@@ -1,0 +1,41 @@
+public class calcular { 
+
+public static void operaciones() { 
+Scanner entrada = new Scanner(System.in); 
+double numero1; 
+double numero2; 
+double resultado=0f; 
+int opcion1; 
+do { 
+System.out.println("numero 1: "); //Aqui es donde preguntamos el primer numero al que haremos una operacion 
+
+if (resultado == 0f){ 
+numero1 = entrada.nextDouble(); 
+}
+else{ 
+System.out.prinln("numero 2: "); 
+numero2 = entrada.nextDouble(); 
+Systen.out.prinln("Operacion n1 suma n2 resta n3 multiplicacion n4 division n5 salir"); 
+opcion1 = entrada.nextInt(); //Aqui declaramos la opcion para usar un switch 
+switch (opcion1){ 
+case 1: resultado = numero1 + numero2; 
+break; 
+case 2: resultado = numero1 - numero2; 
+break; 
+case 3: resultado = numero1 * numero2; 
+break; 
+case 4: resultado = numero1 / numero2; 
+break; 
+case 5: System.exit(0); 
+
+default: System.out.println("Opción incorrecta"); 
+break; 
+} 
+System.out.prinln("Resultado"+resultado); 
+}while(opcion!=5);//cerramos el ciclo y declaramos que cuando la opcion sea 5 salga de la aplicacion 
+}
+public static void main(String[]...args){ 
+operaciones();  
+} 
+}
+
